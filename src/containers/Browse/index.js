@@ -8,7 +8,7 @@ import Container from '../../components/atoms/Container';
 import TextField from '../../components/atoms/TextField';
 import Table from '../../components/molecules/Table';
 // Actions
-import { searchPhrase } from '../../actions';
+import { searchPhrase, clearSearch } from '../../actions';
 
 class Browser extends PureComponent<any, void> {
   _handleChange = (event: any): void => {
@@ -18,13 +18,21 @@ class Browser extends PureComponent<any, void> {
     searchPhrase(value);
   }
 
+  _handleRemove = () => {
+    const { searchPhrase } = this.props;
+
+    searchPhrase("");
+  }
+
   render() {
     const { searchedPhrase, documents } = this.props;
 
     return (
       <Container>
         <TextField
+          searchable
           name="searchbar"
+          handleRemove={this._handleRemove}
           onChange={this._handleChange}
           value={searchedPhrase}
         />
@@ -40,5 +48,6 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, {
+  clearSearch,
   searchPhrase,
 })(Browser);

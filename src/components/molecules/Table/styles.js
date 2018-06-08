@@ -12,6 +12,7 @@ export const Container = styled.div`
   border-radius: 6px;
   border: 1px solid #E2E2E2;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 20px;
   overflow: hidden;
   padding: 10px;
   width: 100%;

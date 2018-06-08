@@ -5,9 +5,14 @@ import React, { PureComponent } from 'react';
 import Item from './Item';
 // Styles
 import { Container } from './styles';
+// Types
+import type { Document } from '../../../types/models';
 
+type Props = {
+  collection: Array<Document>
+}
 
-const Table = (props) => {
+const Table = (props: Props) => {
   const { collection } = props;
   return (
     <Container>

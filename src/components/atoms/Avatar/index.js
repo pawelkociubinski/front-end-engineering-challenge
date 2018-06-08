@@ -5,7 +5,7 @@ import React, { Fragment } from 'react';
 import { Unknown, Initials } from './styles';
 
 type Props = {|
-  +initials: string,
+  +initials: ?string,
   +small?: boolean,
 |}
 

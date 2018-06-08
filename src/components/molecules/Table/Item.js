@@ -4,8 +4,20 @@ import React, { PureComponent } from 'react';
 // Styles
 import { Row, File, Favorite, More, Content, Column, Details, Name, Bold, Property } from './styles';
 
+type Props = {|
+  +id: number,
+  +country: string,
+  +created_at: Date,
+  +document_type: string,
+  +modified_by: string,
+  +name: string,
+  +stared: boolean,
+  +status: string,
+  +title: string,
+  +updated_at: Date,
+|}
 
-const Item = (props) => {
+const Item = (props: Props) => {
   const { country, modified_by, updated_at, title, name, status, stared, document_type } = props;
 
   return (

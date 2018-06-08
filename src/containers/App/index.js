@@ -38,7 +38,7 @@ class App extends PureComponent<Props, void> {
     const paths = [{
       path: routes.HOME_PAGE,
       exact: true,
-      component: <HomePage />,
+      component: <HomePage user={user} />,
       redirect: <Redirect to={routes.LOGIN} />,
       condition: isAuthenticated,
     }, {

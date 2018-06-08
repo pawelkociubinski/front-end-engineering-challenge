@@ -15,3 +15,7 @@ export const searchPhrase = (searchedPhrase: string): SearchPhraseRequestEvent =
   type: actions.SEARCH_PHRASE_REQUESTED,
   payload: { searchedPhrase },
 });
+
+export const clearSearch = () => ({
+  type: actions.CLEAR_SEARCHED_PHRASE,
+});
